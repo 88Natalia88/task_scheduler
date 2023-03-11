@@ -13,7 +13,6 @@ for(let arr of array){
     sum = arr + arr;
 }
 text.innerHTML = `Введенное число состоит из цифр: ${String(array)}`;
-//example.innerHTML = `Сумма введенных цифр: ${sum}`;
 around.innerHTML = `Введенное значение наоборот: ${array.reverse()}`;
 long.innerHTML = `Длина введенного значения: ${array.length} цифры`;
 //console.log(array.length);
