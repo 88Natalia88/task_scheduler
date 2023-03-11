@@ -1,10 +1,17 @@
-let nums = document.getElementById('num');
-let btn = document.getElementById('btn');
-let text = document.getElementById('text');
+const nums = document.getElementById('num');
+const btn = document.getElementById('btn');
+const text = document.getElementById('text');
+const example = document.getElementById('sum');
+const long = document.getElementById('long');
+const around = document.getElementById('around');
 
 btn.addEventListener('click', function(){
 let num = nums.value;
-let numbers = [];
-numbers.push(+num);
+let array = Array.from(num);
+text.innerHTML = `Введенное число состоит из цифр: ${String(array)}`;
+//example.innerHTML = `Сумма введенных цифр: ${sum}`;
+around.innerHTML = `Введенное значение наоборот: ${array.reverse()}`;
+long.innerHTML = `Длина введенного значения: ${array.length} цифры`;
+//console.log(array.length);
 
 });
