@@ -4,6 +4,7 @@ h1{
 }
 body{
     background-color: antiquewhite;
+    text-align: center;
 }
 #task{
     background-color: transparent;
@@ -25,5 +26,5 @@ body{
     margin-left: 545px;
 }
 #text{
-    display: flex;
+    color:lightgray;
 }
