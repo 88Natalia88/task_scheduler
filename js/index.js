@@ -5,11 +5,11 @@ const btn1 = document.getElementById('btn1');
 
 btn.addEventListener('click', function(){
     let taskEnd = task.value;
-    if(taskEnd === ''){
-        text.innerHTML = 'Нет задач';
-        text.style.cssText = "border: none";
-    } else {
-        text.textContent = '';
+    if(taskEnd !== ''){
+        if(text.innerHTML === 'Нет задач'){
+            text.textContent = '';
+            text.style.cssText = "border: none";
+    } 
         const textNew = document.createElement('div');
         textNew.className = 'tasks';
         textNew.innerHTML += `<p>${taskEnd}</p>
