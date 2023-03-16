@@ -5,11 +5,12 @@ const btn1 = document.getElementById('btn1');
 
 btn.addEventListener('click', function(){
     let taskEnd = task.value;
-    if(taskEnd !== ''){
-        if(text.innerHTML === 'Нет задач'){
+    //if(taskEnd !== ''){
+       // if(text.innerHTML === 'Нет задач'){
+        if(taskEnd && text.innerHTML === 'Нет задач'){
             text.textContent = '';
             text.style.cssText = "border: none";
-    } 
+    }
         const textNew = document.createElement('div');
         textNew.className = 'tasks';
         textNew.innerHTML += `<p>${taskEnd}</p>
@@ -17,7 +18,7 @@ btn.addEventListener('click', function(){
         text.append(textNew);
         textNew.style.cssText = " display: flex; justify-content: space-around; color: black";
         text.style.cssText = "border-bottom: 2px solid rgb(197, 179, 179); margin-bottom: 16px;";
-    }
+    //}
    
 });
 btn1.addEventListener('click' , clean);
