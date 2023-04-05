@@ -5,21 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital@1&family=Playfair+Display:ital,wght@1,400;1,500&family=Source+Serif+Pro:ital@1&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <h1>Планировщик задач</h1>
-    </div>
-    <form>
+    <div class="plans">
+        <div class="plans-form">
+        <div class="formTitle">
+            <h1>Планировщик задач</h1>
+        </div>
+        <div class="addTask">
+    <form class="myForm">
         <h2>Добавить задачу</h2>
         <input type="text" name="task" id="task" placeholder="Задача">
         <input type="reset" name="button" id="btn" value="Добавить">
     </form>
-    <div>
+    <div class="listTasks">
         <h2>Список задач</h2>
         <div id="text">Нет задач</div>
         <button id="btn1">Очистить список задач</button>
+</div></div></div>
 </div>
     <script src="js/index.js"></script>
 </body>

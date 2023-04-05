@@ -1,30 +1,58 @@
+*{
+    margin: 0;
+}
 h1{
     text-align: center;
-    color:brown
+    color:#0f1c2d;
+    font-family: 'Playfair Display', serif;
+    padding-bottom: 30px;
+}
+h2{
+    color: #a56252;
+    padding-bottom: 30px;
+    padding-top: 20px;
 }
 body{
-    background-color: antiquewhite;
-    text-align: center;
+    background-image: url(../img/pattern.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Source Serif Pro', serif;
 }
 #task{
     background-color: transparent;
-    border: rgb(197, 179, 179) 2px solid;
+    border: #7189ab 2px solid;
     width: 600px;
     height: 34px;
 }
 #btn{
-    background-color: rgb(197, 179, 179);
-    border: rgb(197, 179, 179) 2px solid;
+    background-color: #b4bccd;
+    border: #7189ab 2px solid;
     width: 130px;
     height: 40px;
 }
 #btn1{
-    background-color: rgb(197, 179, 179);
-    border: rgb(197, 179, 179) 2px solid;
+    background-color: #b4bccd;
+    border: #7189ab 2px solid;
     width: 200px;
     height: 40px;
     margin-left: 545px;
 }
 #text{
     color:lightgray;
+}
+.addTask{
+    border: 2px solid #472e09;
+    max-width: 1000px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 25px 0 25px 0;
+}
+.plans{
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+}
+.line{
+    border-bottom: 2px solid #7189ab;
+    margin-bottom: 16px;
 }
