@@ -16,23 +16,27 @@ btn.addEventListener('click', function(){
         btn1.disabled = false;   
         const textNew = document.createElement('div');
         textNew.className = 'tasks';
-        textNew.innerHTML += `<p>${taskEnd}</p>
-        <input type="checkbox" class="yes">`;
+        textNew.innerHTML += `<div class="allTasks"><p>${taskEnd}</p>
+        <input type="checkbox" class="yes"></div>`;
         text.append(textNew);
         textNew.classList.toggle('line');
-        textNew.style.cssText = "display: flex; justify-content: space-between; color: black; padding-top: 10px;";
+        textNew.style.cssText = "color: black; padding-top: 10px;";
         cleanTask();
         //}
 });
 
+function checkedTask(e){
+    if(e.target.checked){
+        e.target.parentElement.className = "done";
+    } else {
+        e.target.parentElement.className = '';
+    }
+}
 //зачеркивание сделанных задач
 function cleanTask(){
     let checkboxAll = document.querySelectorAll('.yes');
         checkboxAll.forEach(function(checkbox){
-            if(checkbox.checked == true){
-                text.style.cssText = "text-decoration: line-through; color: lightgray;";
-                //console.log(checkbox);
-            }
+            checkbox.addEventListener('click', checkedTask);
         })
         //console.log(checkboxAll);
 }

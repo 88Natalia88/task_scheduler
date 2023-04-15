@@ -56,3 +56,13 @@ body{
     border-bottom: 2px solid #7189ab;
     margin-bottom: 16px;
 }
+.done {
+    text-decoration: line-through; 
+    color: lightgray;
+    display: flex;
+    justify-content: space-between;
+}
+.allTasks{
+    display: flex;
+    justify-content: space-between;
+}
