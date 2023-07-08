@@ -4,11 +4,19 @@ const btn = document.getElementById('btn');
 const btn1 = document.getElementById('btn1');
 btn1.disabled = true;
 
+// Загрузка задач из localStorage при запуске страницы
+window.addEventListener('load', function() {
+    if (localStorage.getItem('tasks')) {
+        text.innerHTML = localStorage.getItem('tasks');
+        cleanTask();
+        btn1.disabled = false;
+    }
+});
+    
 //Добавление задач
 btn.addEventListener('click', function(){
     let taskEnd = task.value;
-    //if(taskEnd !== ''){
-       // if(text.innerHTML === 'Нет задач'){
+
         if(taskEnd && text.innerHTML === 'Нет задач' || task.value == ""){
             text.textContent = '';
             text.style.cssText = "border: none";
@@ -22,7 +30,8 @@ btn.addEventListener('click', function(){
         textNew.classList.toggle('line');
         textNew.style.cssText = "color: black; padding-top: 10px;";
         cleanTask();
-        //}
+        saveTasksToLocalStorage();
+        cleanTaskInput();
 });
 
 function checkedTask(e){
@@ -31,7 +40,9 @@ function checkedTask(e){
     } else {
         e.target.parentElement.className = '';
     }
+    saveTasksToLocalStorage();
 }
+
 //зачеркивание сделанных задач
 function cleanTask(){
     let checkboxAll = document.querySelectorAll('.yes');
@@ -41,10 +52,20 @@ function cleanTask(){
         //console.log(checkboxAll);
 }
 
+// Сохранение задач в localStorage
+function saveTasksToLocalStorage() {
+    localStorage.setItem('tasks', text.innerHTML);
+}
+
 //очистка задач
 btn1.addEventListener('click' , clean);
 function clean(){
+    localStorage.removeItem('tasks');
     text.innerHTML = 'Нет задач';
     text.style.cssText = "border: none";
     btn1.disabled = true;
+}
+
+function cleanTaskInput() {
+    task.value = '';
 }
