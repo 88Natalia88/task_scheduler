@@ -15,7 +15,6 @@ A site for creating and tracking your tasks, with the ability to cross out what 
 ​
 ![Image alt](https://github.com/88Natalia88/task_scheduler/blob/main/tasks.png)
 
-[Сlick me](88natalia88.github.io/task_scheduler/)
 ​
 ## Author
 ​
