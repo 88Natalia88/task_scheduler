@@ -79,7 +79,7 @@ body{
 }
 @media screen and (max-width: 425px) {
     .addTask{
-        max-width: 380px;
+        max-width: 410px;
     }
     #task{
         width: 350px;
